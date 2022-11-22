@@ -2,7 +2,7 @@
   "name": "my-movie-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dadario23.github.io/react-movie-app",
+  "homepage": "https://dadario23.github.io/react-movie-app/#",
   "dependencies": {
     "@sweetalert/with-react": "^0.1.1",
     "@testing-library/jest-dom": "^5.16.5",
