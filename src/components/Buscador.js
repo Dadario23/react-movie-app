@@ -14,7 +14,7 @@ export default function Buscador() {
       swAlert(<h5>Tienes que escribir mas de 4 caracteres</h5>);
     } else {
       e.currentTarget.keyword.value = "";
-      history.push(`/#/resultados?keyword=${keyword}`);
+      history.push(`/resultados?keyword=${keyword}`);
     }
   };
 

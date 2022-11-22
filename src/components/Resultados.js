@@ -3,9 +3,13 @@ import axios from "axios";
 import swAlert from "@sweetalert/with-react";
 import { Link } from "react-router-dom";
 
+import { useLocation } from "react-router-dom";
+
 export default function Resultados() {
-  let query = new URLSearchParams(window.location.search);
-  let keyword = query.get("keyword");
+  const location = useLocation();
+  const query = new URLSearchParams(location.search);
+  const keyword = query.get("keyword");
+  /* console.log(keyword); */
 
   const [moviesResults, setMoviesResults] = useState([]);
 
@@ -27,8 +31,9 @@ export default function Resultados() {
   return (
     <>
       <h2>
-        Buscaste: <em>{keyword}</em>
+        Buscaste: <em>{}</em>
       </h2>
+
       {moviesResults.length === 0 && <h3>No hay resultados</h3>}
       <div className="row">
         {moviesResults.map((oneMovie, idx) => {
