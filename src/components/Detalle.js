@@ -3,11 +3,13 @@ import { useEffect, useState } from "react";
 import { Redirect } from "react-router-dom";
 import swAlert from "@sweetalert/with-react";
 
+import { useLocation } from "react-router-dom";
+
 export default function Detalle() {
   let token = sessionStorage.getItem("token");
+  const location = useLocation();
 
-  let query = new URLSearchParams(window.location.search);
-
+  const query = new URLSearchParams(location.search);
   let movieID = query.get("movieID");
 
   const [movie, setMovie] = useState(null);
@@ -33,7 +35,7 @@ export default function Detalle() {
         <>
           <h2>Título: {movie.title}</h2>
           <div className="row">
-            <div className="col-4">
+            <div className="col-sm-4">
               <img
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 className="img-fluid"

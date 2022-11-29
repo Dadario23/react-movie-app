@@ -31,14 +31,14 @@ export default function Resultados() {
   return (
     <>
       <h2>
-        Buscaste: <em>{}</em>
+        Buscaste: <em>{keyword}</em>
       </h2>
 
       {moviesResults.length === 0 && <h3>No hay resultados</h3>}
       <div className="row">
         {moviesResults.map((oneMovie, idx) => {
           return (
-            <div className="col-4" key={idx}>
+            <div className="col-sm-5 col-md-4 col-lg-3" key={idx}>
               <div className="card my-4">
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`}

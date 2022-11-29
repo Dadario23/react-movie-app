@@ -38,7 +38,7 @@ export default function Listado(props) {
       <div className="row">
         {moviesList.map((oneMovie, idx) => {
           return (
-            <div className="col-3" key={idx}>
+            <div className="col-sm-5 col-md-4 col-lg-3  " key={idx}>
               <div className="card my-4">
                 <img
                   src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`}
